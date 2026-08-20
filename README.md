@@ -7,6 +7,9 @@
 
 ---
 
+> **See it in action:** the index this pipeline builds is consumed end-to-end by the
+> [streaming-rag-chatbot-sse-fastapi](https://github.com/srikanthot/streaming-rag-chatbot-sse-fastapi) technical-manual chatbot.
+
 ## Why this exists
 
 Every enterprise RAG system is only as good as the pipeline that feeds it. This is that pipeline, built like real data engineering: **idempotent, incremental, observable, and self-healing**. It converts a folder of messy technical PDFs into a clean, multimodal, citable search index — and keeps that index in sync as documents are added, edited, or deleted.
@@ -60,7 +63,7 @@ python scripts/deploy_search.py && python scripts/run_pipeline.py
 
 - Ingestion validation: page/section extraction rates, empty-chunk detection, embedding coverage.
 - Index health: record counts per type, orphan detection, reconciliation drift = 0.
-- Retrieval quality feeds the shared `mangos-rag-eval` harness (faithfulness, context recall).
+- Retrieval quality feeds the shared [rag-evaluation-harness-python](https://github.com/srikanthot/rag-evaluation-harness-python) (faithfulness, context recall).
 
 ## Roadmap
 
